@@ -29,6 +29,6 @@ for row in cur.fetchall():
    		smtpObj = smtplib.SMTP('localhost')
   		smtpObj.sendmail(sender, receivers, message)         
    		print "Successfully sent email"
-    except Exception:
+    except SMTPException:
    		print "Error: unable to send email"
 db.close()
